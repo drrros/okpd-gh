@@ -1,0 +1,15 @@
+  version: '3'
+
+  services:
+    web:
+      build:
+        context: .
+      restart: always
+      container_name: okpd_react
+      ports:
+        - 1343:80
+  networks:
+    default:
+      ipam:
+        config:
+          - subnet: 172.35.0.0/16
